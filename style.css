@@ -1,1 +1,67 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+@font-face {
+  font-family: "Pakati";
+  src: url("../Tourist-NZ-Summative2/resources/font/PurePakati-Notch.otf");
+}
+body {
+  background-color: #171717;
+}
+
+h1 {
+  font-family: "Pakati", sans-serif;
+  padding-top: 110px;
+  color: #F5F5F5;
+}
+
+h2 {
+  font-family: "Condiment", cursive;
+  color: #F5F5F5;
+  font-size: 72px;
+}
+
+h3 {
+  font-family: "Condiment", cursive;
+  color: #F5F5F5;
+  font-size: 32px;
+}
+
+.nav-bar {
+  padding: 8px;
+}
+
+ul.breadcrumb {
+  padding: 0px;
+  margin: 16px 0px;
+  list-style: none;
+  color: #F5F5F5;
+  font-family: "Inter", sans-serif;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+ul.breadcrumb li + li::before {
+  padding: 8px;
+  color: #F5F5F5;
+  content: "| ";
+}
+ul.breadcrumb li a {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #41913C;
+  text-decoration: underline;
+}
+
+.dwellings-img {
+  width: 100vw;
+  height: 80vh;
+}
+
+.dwellings-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}/*# sourceMappingURL=style.css.map */

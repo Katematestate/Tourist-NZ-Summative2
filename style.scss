@@ -1,0 +1,73 @@
+$off-white: #F5F5F5;
+$cta-green: #41913C;
+$bkg-black: #171717;
+
+@font-face {
+    font-family: "Pakati";
+    src: url("../Tourist-NZ-Summative2/resources/font/PurePakati-Notch.otf");
+}
+
+body{background-color: $bkg-black;}
+
+  h1 {
+    font-family: "Pakati", sans-serif;
+    padding-top: 110px;
+    color: $off-white;
+  }
+
+  h2{
+    font-family: 'Condiment', cursive;
+    color: $off-white;
+    font-size: 72px;
+  }
+
+  h3{
+    font-family: 'Condiment', cursive;
+    color: $off-white;
+    font-size: 32px;
+  }
+
+  .nav-bar {
+    padding: 8px;
+  }
+
+  ul.breadcrumb{
+    padding: 0px;
+    margin: 16px 0px;
+    list-style: none;
+    color: $off-white;
+    font-family: 'Inter', sans-serif;
+
+    & li{
+        display: inline;
+        font-size: 16px;
+    }
+
+    & li+li::before{
+        padding: 8px;
+        color: $off-white;
+        content: "|\00a0";
+    }
+
+    & li a{
+        color: $off-white;
+        text-decoration: none;
+    }
+
+    & li a:hover{
+        color: $cta-green;
+        text-decoration: underline;
+    }
+  }
+
+  .dwellings-img{
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .dwellings-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
