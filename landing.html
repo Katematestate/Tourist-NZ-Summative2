@@ -13,27 +13,99 @@
     </style>
   </head>
   <body>
-    <section id="landing-page">
-      <div class="nav-bar">
-        <img src="./resources/svgs/pure-nz-logo.svg" alt="pure nz logo" />
-        <ul class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Accommodation</a></li>
-        </ul>
-      </div>
+    <div class="nav-bar">
+      <img src="./resources/svgs/pure-nz-logo.svg" alt="pure nz logo" />
+      <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Accommodation</a></li>
+      </ul>
+    </div>
 
-      <div class="img-wrapper">
-        <img
-        src="./resources/images/landing-image.webp"
-        alt="baywindow view of sunrise"
-      />
-      </div>
-
+    <section id="landing-page" style="display: none">
       <div class="dwellings-card">
-        <h2>Dwellings</h2>
-        <h3>for</h3>
-        <h2>You</h2>
+        <h2>Dwellings <span>for</span> You</h2>
+        <div class="filters">
+          <input type="number" min="1" max="4" />
+          <input type="date" />
+          <button>Submit</button>
+        </div>
       </div>
     </section>
+
+    <section id="accommodation-select" style="display: none">
+      <div class="title">
+        <h1>Accommodation</h1>
+        <p>
+          Dwellings just for you so you can make your stay in New Zealand an
+          experience you’ll never forget.
+        </p>
+      </div>
+
+      <div class="grid-column-two">
+        <div class="accommodation-card">
+          <span class="card-img hostel"></span>
+          <h2>Hostels</h2>
+        </div>
+        <div class="accommodation-card">
+          <span class="card-img hotel"></span>
+          <h2>Hotels</h2>
+        </div>
+        <div class="accommodation-card">
+          <span class="card-img motel"></span>
+          <h2>Motels</h2>
+        </div>
+        <div class="accommodation-card">
+          <span class="card-img houses"></span>
+          <h2>Houses</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="where-next">
+      <div class="title">
+        <h1>Where to next</h1>
+        <p>
+          From local secrets to tourist hotspots, find the best places and
+          things to do on your New Zealand holiday.
+        </p>
+      </div>
+
+      <div class="three-img-grid">
+        <div class="img-card hidden-gem">
+          <div class="description-link">
+            <a href="">Top 10 Hidden Gems →</a>
+          </div>
+        </div>
+        <div class="img-card unique-island">
+          <div class="description-link">
+            <a href="">New Zealand's Unique Islands →</a>
+          </div>
+        </div>
+        <div class="img-card blue-wonders">
+          <div class="description-link">
+            <a href="">Top 10 Blue Wonders →</a>
+          </div>
+        </div>
+      </div>
+      <div class="three-img-grid flipped">
+        <div class="img-card unique-island">
+          <div class="description-link">
+            <a href="">New Zealand's Unique Islands →</a>
+          </div>
+        </div>
+        <div class="img-card blue-wonders">
+          <div class="description-link">
+            <a href="">Top 10 Blue Wonders →</a>
+          </div>
+        </div>
+        <div class="img-card hidden-gem">
+          <div class="description-link">
+            <a href="">Top 10 Hidden Gems →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
   </body>
 </html>
