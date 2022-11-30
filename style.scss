@@ -60,9 +60,14 @@ body{background-color: $bkg-black;}
     }
   }
 
-  .dwellings-img{
-    width: 100vw;
-    height: 80vh;
+  #landing-page{
+    display: flex;
+  }
+
+  .img-wrapper{
+    display: flex;
+    width: 100%;
+    height: auto;
   }
 
   .dwellings-card{
@@ -70,4 +75,4 @@ body{background-color: $bkg-black;}
     justify-content: center;
     align-items: center;
     gap: 16px;
-  }
+}
