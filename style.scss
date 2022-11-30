@@ -20,7 +20,7 @@ body {
 h1 {
   font-family: "Pakati", sans-serif;
   color: $off-white;
-  font-size: 64px;
+  font-size: 72px;
   margin: 0;
 }
 
@@ -74,7 +74,7 @@ ul.breadcrumb {
 #landing-page {
   display: flex;
   flex-direction: column;
-  background-image: url(./resources/images/langing-img.jpg);
+  background-image: url(./resources/images/landing-image-tub.jpg);
   height: 80vh;
   background-size: cover;
   background-position: center;
@@ -172,13 +172,15 @@ ul.breadcrumb {
 
   .title {
     color: $off-white;
-    margin-bottom: 32px + 64px; //64px to compensate for the broken out image
+    margin-top: 16px;
+    margin-bottom: 16px + 32px; //32px to compensate for the broken out image
   }
 
   p {
     font-family: "Inter", sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 24px;
+    width: 60vw;
   }
 
   .grid-column-two {
@@ -209,19 +211,19 @@ ul.breadcrumb {
         background-image: url(./resources/images/the-dwellington/the-dwellington-front.jpg);
       }
       &.hotel {
-        background-image: url(./resources/images/the-dwellington/the-dwellington-front.jpg);
+        background-image: url(./resources/images/novotel-queenstown-lakeside/novotel-front.jpg);
       }
       &.motel {
-        background-image: url(./resources/images/the-dwellington/the-dwellington-front.jpg);
+        background-image: url(./resources/images/futuna-rocks-motel/futuna-rocks-front.jpg);
       }
       &.houses {
-        background-image: url(./resources/images/the-dwellington/the-dwellington-front.jpg);
+        background-image: url(./resources/images/dream-inn/dream-inn-front.jpg);
       }
     }
 
     h2 {
       font-family: "Inter", sans-serif;
-      font-size: 64px;
+      font-size: 42px;
       position: absolute;
       margin: 0;
       padding: 0 16px;
@@ -237,13 +239,14 @@ ul.breadcrumb {
 
 #where-next {
   max-width: 2080px;
-  margin: 128px auto;
-  padding: 32px;
+  margin: 32px auto;
+  padding: 16px;
 
   p {
     color: $off-white;
     font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 24px;
+    width: 60vw;
   }
 }
 
@@ -273,6 +276,15 @@ ul.breadcrumb {
     &.blue-wonders {
       background-image: url(./resources/images/where-section/blue-wonders.jpg);
     }
+    &.best-beaches {
+      background-image: url(./resources/images/where-section/best-beaches.jpg);
+    }
+    &.best-sunrise {
+      background-image: url(./resources/images/where-section/best-sunrise.jpg);
+    }
+    &.waterfalls {
+      background-image: url(./resources/images/where-section/waterfalls.jpg);
+    }
 
     .description-link {
       position: absolute;
@@ -288,8 +300,64 @@ ul.breadcrumb {
       a{
         color: $off-white;
         font-family: "Inter", sans-serif;
+        text-decoration: none;
       }
     }
 
   }
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: $border-size solid $cta-green;
+  margin: 48px 64px;
+  padding: 24px 0px;
+  gap: 32px;
+
+.find-us{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .title{
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .social-media{
+    display: flex;
+    gap: 8px;
+  }
+
+  p{
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    margin: 0;
+    padding: 8px;
+  }
+}
+
+.contact-us, .our-sites, .help, .help-overflow{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .title{
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  p{
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    margin: 0;
+    padding: 8px;
+  }
+}
 }
