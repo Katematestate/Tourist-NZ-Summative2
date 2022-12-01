@@ -1,8 +1,8 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accommodation Suggestions</title>
     <link rel="stylesheet" href="style.css" />
     <style>
@@ -11,8 +11,82 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Condiment&display=swap");
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <img src="./resources/svgs/pure-nz-logo.svg" alt="pure nz logo" />
+      <ul class="breadcrumb">
+        <li><a href="./landing.html">Dwellings for You</a></li>
+        <li><a href="./accommodation.html">Accommodation</a></li>
+      </ul>
+    </div>
+
+    <section id="accommodations">
+      <div class="accommodation-landing">
+        <h1>Accommodation</h1>
+        <div class="filters">
+          <input type="number" min="1" max="4" />
+          <input type="date" />
+          <button>Submit</button>
+        </div>
+      </div>
+
+      <div class="grid-column-two">
+        <div class="accommodation-type hostel">
+          <img
+            src="./resources/images/the-dwellington/the-dwellington-front.jpg"
+            alt=""
+          />
+          <div class="info-title">
+            <h2>The Dwellington</h2>
+            <span class="price">$30</span>
+            <p class="per-night">/night</p>
+          </div>
+          <div class="info-three-icons">
+            <div class="location">
+              <img src="./resources/svgs/location-icon.svg" alt="" />
+              <span>Wellington,NZ</span>
+            </div>
+            <div class="guests">
+              <img src="./resources/svgs/people-icon.svg" alt="" />
+              <span>1 Adult</span>
+            </div>
+            <div class="nights">
+              <img src="./resources/svgs/night-icon.svg" alt="" />
+              <span>1-10 nights</span>
+            </div>
+          </div>
+          <p>
+            Offering a tennis court, The Dwellington is less than 5 minutes’
+            drive from the Bluebridge Ferry Terminal and 10 minutes’ drive from
+            the Interislander Ferry Terminal. Guests can enjoy free ferry drop
+            offs in the morning and free WiFi in public areas. The Dwellington
+            is a 10 minute walk from Wellington Train and Bus Station and a
+            variety of restaurants, cafes and shops. It’s a 15 minute walk from
+            the Westpac Stadium and Lambton Quay. There is access to a shared
+            kitchen and a dining area. The bathroom facilities are shared and
+            include a shower and a toilet. There is also a mini-cinema with a 4K
+            projector.
+          </p>
+          <a href="#">Food Options</a>
+          <div class="amenity-icons">
+            <div class="free-wifi">
+              <img src="./resources/svgs/wifi-icon.svg" alt="" />
+              <span>Free Wifi</span>
+            </div>
+            <div class="family-room">
+              <img src="./resources/svgs/family-icon.svg" alt="" />
+              <span>Family Rooms</span>
+            </div>
+            <div class="no-smoking">
+              <img src="./resources/svgs/no-smoking-icon.svg" alt="" />
+              <span>Non-smoking Rooms</span>
+            </div>
+          </div>
+          <button>Book</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
