@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accommodation Suggestions</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="accommodation.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
@@ -31,16 +31,25 @@
         </div>
       </div>
 
-      <div class="grid-column-two">
-        <div class="accommodation-type hostel">
-          <img
+      <div class="dwellings">
+        <div class="accommodation-card hostel">
+          <div class="photo-reel" data-current-image="0">
+            <img
+            class="selected"
             src="./resources/images/the-dwellington/the-dwellington-front.jpg"
             alt=""
-          />
+            />
+            <img src="./resources/images/the-dwellington/the-dwellington-dining-room.jpg" alt="">
+            <img src="./resources/images/the-dwellington/the-dwellington-cinema.jpg" alt="">
+            <div class="carousel-toolbar">
+              <button class="left">&lt;</button>
+              <div class="carousel-chips"></div>
+              <button class="right">&gt;</button>
+            </div>
+          </div>
           <div class="info-title">
             <h2>The Dwellington</h2>
-            <span class="price">$30</span>
-            <p class="per-night">/night</p>
+            <p class="per-night"><span class="price">$30</span>/night</p>
           </div>
           <div class="info-three-icons">
             <div class="location">
@@ -60,7 +69,10 @@
             Offering a tennis court, The Dwellington is less than 5 minutes’
             drive from the Bluebridge Ferry Terminal and 10 minutes’ drive from
             the Interislander Ferry Terminal. Guests can enjoy free ferry drop
-            offs in the morning and free WiFi in public areas. The Dwellington
+            offs in the morning and free WiFi in public areas. 
+          </p>
+          <p>
+            The Dwellington
             is a 10 minute walk from Wellington Train and Bus Station and a
             variety of restaurants, cafes and shops. It’s a 15 minute walk from
             the Westpac Stadium and Lambton Quay. There is access to a shared
@@ -68,7 +80,6 @@
             include a shower and a toilet. There is also a mini-cinema with a 4K
             projector.
           </p>
-          <a href="#">Food Options</a>
           <div class="amenity-icons">
             <div class="free-wifi">
               <img src="./resources/svgs/wifi-icon.svg" alt="" />
@@ -83,10 +94,14 @@
               <span>Non-smoking Rooms</span>
             </div>
           </div>
-          <button>Book</button>
+          <div class="actions">
+            <button class="secondary">Food Options</button>
+            <button>Book</button>
+          </div>
           </div>
         </div>
       </div>
     </section>
+    <script src="./script/accommodation.js"></script>
   </body>
 </html>

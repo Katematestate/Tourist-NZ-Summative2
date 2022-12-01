@@ -1,0 +1,166 @@
+@import "vars.scss";
+@import "common.scss";
+
+.accommodation-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    margin: 0 32px;
+    gap: 16px;
+    margin-top: -16px;
+
+    input,
+    button {
+      width: 100%;
+    }
+  }
+}
+
+#accommodations {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dwellings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.accommodation-card {
+  border: $border-size solid $cta-green;
+  margin-top: 32px;
+  padding: 0 16px;
+
+  .photo-reel {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin-top: -32px;
+
+    .carousel-toolbar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        font-size: 20px;
+        box-shadow: 0 0 0 3px $bkg-black;
+      }
+
+      .carousel-chips {
+        display: flex;
+        gap: 8px;
+
+        .carousel-chip {
+          height: 20px;
+          width: 20px;
+          background-color: #fff;
+          border-radius: 100%;
+          border: 3px solid $bkg-black;
+
+          &.selected {
+            background-color: $cta-green;
+          }
+        }
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 95%;
+      opacity: 0;
+      transition: opacity 250ms ease;
+      grid-row: 1;
+      grid-column: 1;
+
+      &.selected {
+        opacity: 1;
+      }
+    }
+  }
+
+  p {
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    font-weight: 300;
+  }
+
+  .info-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 16px;
+
+    h2 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .price {
+      font-family: "Inter", sans-serif;
+      color: $cta-green;
+      font-size: 36px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .per-night {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  .info-three-icons,
+  .amenity-icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    > * {
+      display: flex;
+      align-items: center;
+      gap: 1ch;
+    }
+    img {
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+  .amenity-icons {
+    font-size: 14px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 0 auto;
+    margin-bottom: -1em;
+    margin-top: 16px;
+    font-size: 24px;
+  }
+
+  button {
+    display: block;
+    font-size: inherit;
+    padding: 6px 24px;
+  }
+}

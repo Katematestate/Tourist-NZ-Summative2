@@ -3,6 +3,10 @@
   font-family: "Pakati";
   src: url("./resources/font/PurePakati-Notch.otf");
 }
+[x] {
+  display: none !important;
+}
+
 body {
   background-color: #171717;
   margin: 0;
@@ -32,6 +36,9 @@ h3 {
 .nav-bar {
   padding: 16px;
 }
+.nav-bar img {
+  width: min(436px, 100%);
+}
 
 ul.breadcrumb {
   padding: 0px;
@@ -58,6 +65,39 @@ ul.breadcrumb li a:hover {
   text-decoration: underline;
 }
 
+input,
+button {
+  border-radius: 5px;
+  padding: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  border: none;
+}
+
+button {
+  background-color: #41913c;
+  color: #f5f5f5;
+}
+button.secondary {
+  border: 3px solid #41913c;
+  background-color: #171717;
+  color: #f5f5f5;
+}
+
+* ~ section {
+  margin-top: 32px;
+}
+
+section > .title {
+  color: #f5f5f5;
+}
+section > .title > p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  width: 60vw;
+}
+
 #landing-page {
   display: flex;
   flex-direction: column;
@@ -74,7 +114,7 @@ ul.breadcrumb li a:hover {
   flex-direction: column;
   align-items: center;
   border: 5px solid #41913c;
-  width: 500px;
+  width: min(500px, 90vw);
   border-top: none;
   background-color: rgba(23, 23, 23, 0.5);
   position: absolute;
@@ -127,37 +167,22 @@ ul.breadcrumb li a:hover {
 }
 .dwellings-card .filters input,
 .dwellings-card .filters button {
-  border-radius: 5px;
-  padding: 4px;
   width: 100%;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  border: none;
-}
-.dwellings-card .filters button {
-  background-color: #41913c;
-  color: #f5f5f5;
 }
 
 #accommodation-select {
   padding: 16px;
-  max-width: 1440px;
   margin: 0 auto;
 }
 #accommodation-select .title {
-  color: #f5f5f5;
   margin-top: 16px;
   margin-bottom: 48px;
-}
-#accommodation-select p {
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-  width: 60vw;
 }
 #accommodation-select .grid-column-two {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
   gap: 64px;
 }
@@ -170,7 +195,7 @@ ul.breadcrumb li a:hover {
 #accommodation-select .accommodation-card .card-img {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  height: 400px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -206,14 +231,9 @@ ul.breadcrumb li a:hover {
 
 #where-next {
   max-width: 2080px;
-  margin: 32px auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 16px;
-}
-#where-next p {
-  color: #f5f5f5;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  width: 60vw;
 }
 
 .three-img-grid {
@@ -270,23 +290,32 @@ ul.breadcrumb li a:hover {
 
 footer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
   border: 5px solid #41913c;
   margin: 48px 64px;
-  padding: 24px 0px;
-  gap: 32px;
+  padding: 32px;
+  gap: 8px;
+  position: relative;
+}
+footer .footer-logo {
+  background-color: #171717;
+  position: absolute;
+  bottom: 100%;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  padding: 0 16px;
+}
+footer .title {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  font-weight: 700;
+  font-size: 24px;
 }
 footer .find-us {
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-footer .find-us .title {
-  font-family: "Inter", sans-serif;
-  color: #f5f5f5;
-  font-weight: 700;
-  font-size: 24px;
 }
 footer .find-us .social-media {
   display: flex;
@@ -298,91 +327,124 @@ footer .find-us p {
   margin: 0;
   padding: 8px;
 }
-footer .contact-us, footer .our-sites, footer .help, footer .help-overflow {
+footer .contact-us,
+footer .our-sites,
+footer .help,
+footer .help-overflow {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-footer .contact-us .title, footer .our-sites .title, footer .help .title, footer .help-overflow .title {
+footer .contact-us .title,
+footer .our-sites .title,
+footer .help .title,
+footer .help-overflow .title {
   font-family: "Inter", sans-serif;
   color: #f5f5f5;
   font-weight: 700;
   font-size: 24px;
 }
-footer .contact-us p, footer .our-sites p, footer .help p, footer .help-overflow p {
+footer .contact-us p,
+footer .our-sites p,
+footer .help p,
+footer .help-overflow p {
   font-family: "Inter", sans-serif;
   color: #f5f5f5;
   margin: 0;
   padding: 8px;
 }
 
-.accommodation-landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 64px;
+@media (max-width: 1130px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.accommodation-landing .filters {
-  display: grid;
-  grid-template-columns: 1fr 1fr 0.8fr;
-  margin: 0 32px;
-  gap: 16px;
-  margin-top: -16px;
+@media (max-width: 770px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.accommodation-landing .filters input,
-.accommodation-landing .filters button {
-  border-radius: 5px;
-  padding: 4px;
-  width: 100%;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  border: none;
-}
-.accommodation-landing .filters button {
-  background-color: #41913c;
-  color: #f5f5f5;
-}
-
-#accommodations {
-  padding: 16px;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.accommodation-type {
-  border: 5px solid #41913c;
-}
-.accommodation-type p {
-  font-family: "Inter", sans-serif;
-  color: #f5f5f5;
-}
-
-.info-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 16px;
-}
-.info-title .price {
-  font-family: "Inter", sans-serif;
-  color: #41913c;
-  font-size: 52px;
-  font-weight: 800;
-}
-.info-title .per-night {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.info-three-icons, .amenity-icons {
-  display: flex;
-  justify-content: space-evenly;
-}
-.info-three-icons span, .amenity-icons span {
-  font-family: "Inter", sans-serif;
-  color: #f5f5f5;
-  font-weight: 600;
-  font-size: 18px;
+@media (max-width: 590px) {
+  h1 {
+    font-size: 52px;
+  }
+  * ~ section {
+    margin-top: 0;
+  }
+  section > .title > p {
+    font-size: 16px;
+    width: auto;
+  }
+  .dwellings-card:before, .dwellings-card:after {
+    display: none;
+  }
+  .dwellings-card h2 {
+    font-size: 52px;
+  }
+  .dwellings-card .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dwellings-card .filters button {
+    grid-column: span 2;
+  }
+  #accommodation-select .title {
+    margin-bottom: 16px;
+  }
+  #accommodation-select .accommodation-card {
+    padding: 8px;
+    padding-bottom: 16px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  #accommodation-select .accommodation-card h2 {
+    font-size: 20px;
+  }
+  #accommodation-select .accommodation-card .card-img {
+    height: auto;
+    aspect-ratio: 1;
+    top: 0;
+    margin: 0;
+  }
+  #accommodation-select .grid-column-two {
+    gap: 16px;
+  }
+  #where-next p {
+    font-size: 16px;
+    width: auto;
+  }
+  .three-img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .three-img-grid :nth-child(1) {
+    grid-column: span 2;
+  }
+  .three-img-grid .img-card {
+    height: 175px;
+  }
+  .three-img-grid .img-card .description-link {
+    font-size: 12px;
+  }
+  .three-img-grid.flipped {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  footer .help-overflow .title {
+    display: none;
+  }
+  .footer-logo {
+    width: 100%;
+    padding: 16px;
+  }
+  .footer-logo img {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */

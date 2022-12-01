@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pakati";
+  src: url("./resources/font/PurePakati-Notch.otf");
+}
+[x] {
+  display: none !important;
+}
+
+body {
+  background-color: #171717;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Pakati", sans-serif;
+  color: #f5f5f5;
+  font-size: 72px;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Condiment", cursive;
+  color: #f5f5f5;
+  font-size: 72px;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Condiment", cursive;
+  color: #f5f5f5;
+  font-size: 32px;
+}
+
+.nav-bar {
+  padding: 16px;
+}
+.nav-bar img {
+  width: min(436px, 100%);
+}
+
+ul.breadcrumb {
+  padding: 0px;
+  margin: 16px 0px;
+  list-style: none;
+  color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+ul.breadcrumb li + li::before {
+  padding: 8px;
+  color: #f5f5f5;
+  content: "| ";
+}
+ul.breadcrumb li a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #41913c;
+  text-decoration: underline;
+}
+
+input,
+button {
+  border-radius: 5px;
+  padding: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  border: none;
+}
+
+button {
+  background-color: #41913c;
+  color: #f5f5f5;
+}
+button.secondary {
+  border: 3px solid #41913c;
+  background-color: #171717;
+  color: #f5f5f5;
+}
+
+.accommodation-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.accommodation-landing .filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  margin: 0 32px;
+  gap: 16px;
+  margin-top: -16px;
+}
+.accommodation-landing .filters input,
+.accommodation-landing .filters button {
+  width: 100%;
+}
+
+#accommodations {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dwellings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.accommodation-card {
+  border: 5px solid #41913c;
+  margin-top: 32px;
+  padding: 0 16px;
+}
+.accommodation-card .photo-reel {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: -32px;
+}
+.accommodation-card .photo-reel .carousel-toolbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accommodation-card .photo-reel .carousel-toolbar button {
+  font-size: 20px;
+  box-shadow: 0 0 0 3px #171717;
+}
+.accommodation-card .photo-reel .carousel-toolbar .carousel-chips {
+  display: flex;
+  gap: 8px;
+}
+.accommodation-card .photo-reel .carousel-toolbar .carousel-chips .carousel-chip {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 3px solid #171717;
+}
+.accommodation-card .photo-reel .carousel-toolbar .carousel-chips .carousel-chip.selected {
+  background-color: #41913c;
+}
+.accommodation-card .photo-reel img {
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  grid-row: 1;
+  grid-column: 1;
+}
+.accommodation-card .photo-reel img.selected {
+  opacity: 1;
+}
+.accommodation-card p {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+.accommodation-card .info-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 16px;
+}
+.accommodation-card .info-title h2 {
+  font-size: 48px;
+  margin: 0;
+}
+.accommodation-card .info-title .price {
+  font-family: "Inter", sans-serif;
+  color: #41913c;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+.accommodation-card .info-title .per-night {
+  font-size: 20px;
+  font-weight: 700;
+}
+.accommodation-card .info-three-icons,
+.accommodation-card .amenity-icons {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+}
+.accommodation-card .info-three-icons > *,
+.accommodation-card .amenity-icons > * {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+.accommodation-card .info-three-icons img,
+.accommodation-card .amenity-icons img {
+  height: 1.5em;
+  width: 1.5em;
+}
+.accommodation-card .amenity-icons {
+  font-size: 14px;
+}
+.accommodation-card .actions {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 auto;
+  margin-bottom: -1em;
+  margin-top: 16px;
+  font-size: 24px;
+}
+.accommodation-card button {
+  display: block;
+  font-size: inherit;
+  padding: 6px 24px;
+}/*# sourceMappingURL=accommodation.css.map */

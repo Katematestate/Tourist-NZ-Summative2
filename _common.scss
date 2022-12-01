@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Pakati";
+  src: url("./resources/font/PurePakati-Notch.otf");
+}
+
+[x] {
+  display: none !important;
+}
+
+body {
+  background-color: $bkg-black;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Pakati", sans-serif;
+  color: $off-white;
+  font-size: 72px;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Condiment", cursive;
+  color: $off-white;
+  font-size: 72px;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Condiment", cursive;
+  color: $off-white;
+  font-size: 32px;
+}
+
+.nav-bar {
+  padding: 16px;
+
+  img {
+    width: min(436px, 100%);
+  }
+}
+
+ul.breadcrumb {
+  padding: 0px;
+  margin: 16px 0px;
+  list-style: none;
+  color: $off-white;
+  font-family: "Inter", sans-serif;
+
+  & li {
+    display: inline;
+    font-size: 16px;
+  }
+
+  & li + li::before {
+    padding: 8px;
+    color: $off-white;
+    content: "|\00a0";
+  }
+
+  & li a {
+    color: $off-white;
+    text-decoration: none;
+  }
+
+  & li a:hover {
+    color: $cta-green;
+    text-decoration: underline;
+  }
+}
+
+input,
+button {
+  border-radius: 5px;
+  padding: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  border: none;
+}
+
+button {
+  background-color: $cta-green;
+  color: $off-white;
+
+  &.secondary {
+    border: 3px solid $cta-green;
+    background-color: $bkg-black;
+    color: $off-white;
+  }
+}
