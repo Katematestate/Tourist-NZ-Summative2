@@ -30,7 +30,9 @@ h2 {
 h3 {
   font-family: "Condiment", cursive;
   color: #f5f5f5;
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
 }
 
 .nav-bar {
@@ -84,6 +86,72 @@ button.secondary {
   color: #f5f5f5;
 }
 
+footer {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+  border: 3px solid #41913c;
+  margin: 48px 64px;
+  padding: 32px;
+  gap: 8px;
+  position: relative;
+}
+footer .footer-logo {
+  background-color: #171717;
+  position: absolute;
+  bottom: 100%;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  padding: 0 16px;
+}
+footer .title {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  font-weight: 700;
+  font-size: 24px;
+}
+footer .find-us {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+footer .find-us .social-media {
+  display: flex;
+  gap: 8px;
+}
+footer .find-us p {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 8px;
+}
+footer .contact-us,
+footer .our-sites,
+footer .help,
+footer .help-overflow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+footer .contact-us .title,
+footer .our-sites .title,
+footer .help .title,
+footer .help-overflow .title {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  font-weight: 700;
+  font-size: 24px;
+}
+footer .contact-us p,
+footer .our-sites p,
+footer .help p,
+footer .help-overflow p {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 8px;
+}
+
 .accommodation-landing {
   display: flex;
   flex-direction: column;
@@ -91,6 +159,14 @@ button.secondary {
   align-items: center;
   gap: 32px;
   margin-bottom: 64px;
+}
+.accommodation-landing span {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  font-size: 32px;
+  font-weight: 600;
+  max-width: 550px;
+  margin-bottom: 24px;
 }
 .accommodation-landing .filters {
   display: grid;
@@ -117,7 +193,7 @@ button.secondary {
 }
 
 .accommodation-card {
-  border: 5px solid #41913c;
+  border: 3px solid #41913c;
   margin-top: 32px;
   padding: 0 16px;
 }
@@ -147,8 +223,8 @@ button.secondary {
   gap: 8px;
 }
 .accommodation-card .photo-reel .carousel-toolbar .carousel-chips .carousel-chip {
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   background-color: #fff;
   border-radius: 100%;
   border: 3px solid #171717;
@@ -180,6 +256,11 @@ button.secondary {
   align-items: baseline;
   margin-top: 16px;
 }
+.accommodation-card .info-title .name {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
 .accommodation-card .info-title h2 {
   font-size: 48px;
   margin: 0;
@@ -199,6 +280,8 @@ button.secondary {
 .accommodation-card .amenity-icons {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 4px;
   font-weight: 700;
   font-size: 18px;
   font-family: "Inter", sans-serif;
@@ -217,6 +300,15 @@ button.secondary {
 }
 .accommodation-card .amenity-icons {
   font-size: 14px;
+}
+.accommodation-card .amenity-icons .free-wifi,
+.accommodation-card .amenity-icons .family-room,
+.accommodation-card .amenity-icons .no-smoking,
+.accommodation-card .amenity-icons .fitness-centre,
+.accommodation-card .amenity-icons .free-parking,
+.accommodation-card .amenity-icons .hot-tub {
+  display: flex;
+  flex-direction: column;
 }
 .accommodation-card .actions {
   display: flex;

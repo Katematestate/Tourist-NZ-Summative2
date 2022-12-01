@@ -30,7 +30,9 @@ h2 {
 h3 {
   font-family: "Condiment", cursive;
   color: $off-white;
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
 }
 
 .nav-bar {
@@ -87,5 +89,73 @@ button {
     border: 3px solid $cta-green;
     background-color: $bkg-black;
     color: $off-white;
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+  border: $border-size solid $cta-green;
+  margin: 48px 64px;
+  padding: 32px;
+  gap: 8px;
+  position: relative;
+
+  .footer-logo {
+    background-color: $bkg-black;
+    position: absolute;
+    bottom: 100%;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    padding: 0 16px;
+  }
+
+  .title {
+    font-family: "Inter", sans-serif;
+    color: $off-white;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .find-us {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .social-media {
+      display: flex;
+      gap: 8px;
+    }
+
+    p {
+      font-family: "Inter", sans-serif;
+      color: $off-white;
+      margin: 0;
+      padding: 8px;
+    }
+  }
+
+  .contact-us,
+  .our-sites,
+  .help,
+  .help-overflow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .title {
+      font-family: "Inter", sans-serif;
+      color: $off-white;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    p {
+      font-family: "Inter", sans-serif;
+      color: $off-white;
+      margin: 0;
+      padding: 8px;
+    }
   }
 }
