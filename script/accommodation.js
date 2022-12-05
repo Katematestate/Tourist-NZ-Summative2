@@ -77,3 +77,20 @@ carouselButtonsRight.forEach((button) => {
     container.setAttribute("data-current-image", currentImageIndex);
   });
 });
+
+// FOOD OPTION FUNCTION
+
+const food_option_buttons = document.querySelectorAll("button[data-toggles]");
+
+food_option_buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const element = event.target;
+    const target = element.getAttribute("data-toggles");
+    const c = document.getElementById(target);
+    if (c.style.opacity === "0") {
+      c.style.opacity = "1";
+    } else {
+      c.style.opacity = "0";
+    }
+  });
+});

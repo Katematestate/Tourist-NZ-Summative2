@@ -35,6 +35,7 @@
       <div class="dwellings">
         <div class="accommodation-card hostel">
           <div class="photo-reel" data-current-image="0">
+            
             <img
             class="selected"
             src="./resources/images/the-dwellington/the-dwellington-front.jpg"
@@ -54,9 +55,13 @@
               <button class="right">&gt;</button>
             </div>
           </div>
+          <div class="accommodation-type">
+            <span>Hostel</span>
+            <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">9.1</span>
+          </div>
           <div class="info-title">
             <h2>The Dwellington</h2>
-            <p class="per-night"><span class="price">$30</span>/night</p>
+            <p class="per-night"><span class="price">$30</span>/ night</p>
           </div>
           <div class="info-three-icons">
             <div class="location">
@@ -101,8 +106,32 @@
               <span>Non-smoking Rooms</span>
             </div>
           </div>
+          <div class="food-modal no-display" id="dwellington-food-options" style="opacity: 0;">
+            <div class="kitchen">
+              <h2>Food Options</h2>
+              <img src="./resources/images/the-dwellington/the-dwellington-kitchen.jpg" alt="">
+            </div>
+            <button class="exit" data-toggles="dwellington-food-options">X</button>
+            <div class="food-options">
+              <span>Drink Options: (Free & All Day)</span>
+              <ul>
+                <li>Coffee (variety of milks)</li>
+                <li>Tea</li>
+                <li>Hot Chocolate</li>
+              </ul>
+              <span>Breakfast Choices: (Free)</span>
+              <ul>
+                <li>Continental</li>
+                <li>Cereal (3 choices)</li>
+                <li>Bread (peanut butter and jam)</li>
+                <li>Eggs (myriad of herbs, spices and oils)</li>
+                <li>Fruit (banana, kiwi and oranges)</li>
+              </ul>
+              <span>Open kitchen for cooking your own food.</span>
+            </div>
+          </div>
           <div class="actions">
-            <button class="secondary">Food Options</button>
+            <button class="secondary" data-toggles="dwellington-food-options">Food Options</button>
             <button>Book</button>
           </div>
           </div>
@@ -127,12 +156,16 @@
               <button class="right">&gt;</button>
             </div>
           </div>
+          <div class="accommodation-type">
+            <span>Hotel</span>
+            <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">8.1</span>
+          </div>
           <div class="info-title">
             <div class="name">
               <h2>Novotel</h2>
               <h3>Queenstown Lakeside</h3>
             </div>
-            <p class="per-night"><span class="price">$157</span>/night</p>
+            <p class="per-night"><span class="price">$157</span>/ night</p>
           </div>
           <div class="info-three-icons">
             <div class="location">
@@ -196,12 +229,16 @@
                 <button class="right">&gt;</button>
               </div>
             </div>
+            <div class="accommodation-type">
+              <span>Motel</span>
+              <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">9.1</span>
+            </div>
             <div class="info-title">
               <div class="name">
-                <h2>Futuna Rocks</h2>
+                <h2 class="size-fix">Futuna Rocks</h2>
                 <h3>Motel</h3>
               </div>
-              <p class="per-night"><span class="price">$90</span>/night</p>
+              <p class="per-night"><span class="price">$90</span>/ night</p>
             </div>
             <div class="info-three-icons">
               <div class="location">
@@ -266,9 +303,14 @@
                   <button class="right">&gt;</button>
                 </div>
               </div>
+              <div class="accommodation-type">
+                <span>House</span>
+                
+                <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">9.4</span>
+              </div>
               <div class="info-title">
                   <h2>Dream Inn</h2>
-                <p class="per-night"><span class="price">$240</span>/night</p>
+                <p class="per-night"><span class="price">$240</span>/ night</p>
               </div>
               <div class="info-three-icons">
                 <div class="location">

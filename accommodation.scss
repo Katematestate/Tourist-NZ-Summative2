@@ -1,12 +1,16 @@
 @import "vars.scss";
 @import "common.scss";
 
+#accommodations {
+  margin-bottom: 72px;
+}
+
 .accommodation-landing {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   margin-bottom: 64px;
 
   span {
@@ -14,7 +18,6 @@
     color: $off-white;
     font-size: 32px;
     font-weight: 600;
-    max-width: 550px;
     margin-bottom: 24px;
   }
 
@@ -32,22 +35,21 @@
   }
 }
 
-#accommodations {
-  padding: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .dwellings {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 64px;
 }
 
 .accommodation-card {
+  display: flex;
+  flex-direction: column;
   border: $border-size solid $cta-green;
   margin-top: 32px;
-  padding: 0 16px;
+  padding: 0 16px 32px;
+  position: relative;
 
   .photo-reel {
     display: grid;
@@ -104,6 +106,30 @@
     }
   }
 
+  .accommodation-type {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    border-bottom: 3px solid $cta-green;
+
+    span {
+      font-family: "Inter", sans-serif;
+      color: $off-white;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .rating {
+      display: flex;
+      gap: 6px;
+    }
+
+    .star {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
   p {
     font-family: "Inter", sans-serif;
     color: $off-white;
@@ -115,7 +141,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 16px;
+    margin-top: 8px;
 
     .name {
       display: flex;
@@ -141,6 +167,11 @@
       font-weight: 700;
     }
   }
+
+  .info-three-icons {
+    margin-top: 0 auto;
+  }
+
   .info-three-icons,
   .amenity-icons {
     display: flex;
@@ -163,6 +194,7 @@
   }
   .amenity-icons {
     font-size: 14px;
+    margin-top: auto;
 
     .free-wifi,
     .family-room,
@@ -172,22 +204,294 @@
     .hot-tub {
       display: flex;
       flex-direction: column;
+      margin-bottom: 8px;
+    }
+  }
+
+  .food-modal .no-display {
+    display: none;
+  }
+
+  .food-modal {
+    display: flex;
+    flex-direction: column;
+    background-color: $bkg-black;
+    color: $off-white;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-shadow: 0 -3px 0 0 $cta-green, 0 -38px 0 0 $bkg-black;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+
+    button {
+      display: block;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      font-size: 20px;
+      box-shadow: 0 0 0 3px $bkg-black;
+      pointer-events: all;
+    }
+
+    ul {
+      font-size: 16px;
+      color: $off-white;
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+    }
+
+    span {
+      font-size: 20px;
+      color: $off-white;
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  .food-options {
+    padding: 16px;
+  }
+
+  .kitchen {
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    h2 {
+      background-color: $bkg-fade;
+      font-size: 48px;
+      padding: 0px 16px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   }
 
   .actions {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    transform: translateY(50%);
     gap: 32px;
     margin: 0 auto;
-    margin-bottom: -1em;
-    margin-top: 16px;
     font-size: 24px;
   }
 
   button {
     display: block;
     font-size: inherit;
-    padding: 6px 24px;
+    padding: 6px 20px;
+  }
+}
+
+@media (max-width: 1060px) {
+  #accommodations {
+    margin: 32px;
+  }
+
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    font-size: 14px;
+
+    & button {
+      padding: 4px 16px;
+    }
+  }
+
+  .dwellings {
+    width: 100%;
+
+    .info-title {
+      h2 {
+        font-size: 34px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+      .price {
+        font-size: 32px;
+      }
+      .per-night {
+        font-size: 16px;
+      }
+    }
+
+    .info-three-icons {
+      font-size: 14px;
+    }
+
+    .amenity-icons {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 790px) {
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    font-size: 14px;
+
+    & button {
+      padding: 4px 16px;
+    }
+  }
+
+  .dwellings {
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    .info-title {
+      h2 {
+        font-size: 48px;
+      }
+
+      h3 {
+        font-size: 32px;
+      }
+      .price {
+        font-size: 36px;
+      }
+      .per-night {
+        font-size: 20px;
+      }
+    }
+
+    .info-three-icons {
+      font-size: 18px;
+    }
+
+    .amenity-icons {
+      span {
+        display: flex;
+      }
+    }
+
+    .actions {
+      button {
+        font-size: 20px;
+      }
+    }
+
+    footer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-logo {
+      width: 100%;
+      img {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .accommodation-landing {
+    gap: 16px;
+    margin-bottom: 32px;
+    h1 {
+      font-size: 52px;
+    }
+    span {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    * ~ section {
+      margin-top: 0;
+    }
+
+    .filters {
+      grid-template-columns: 1fr 1fr;
+
+      button {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .dwellings {
+    width: 100%;
+
+    .info-title {
+      .name {
+        align-items: center;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+      .price {
+        font-size: 28px;
+      }
+      .per-night {
+        font-size: 14px;
+      }
+    }
+
+    .info-three-icons {
+      font-size: 12px;
+    }
+
+    .amenity-icons {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    font-size: 14px;
+
+    & button {
+      padding: 4px 16px;
+    }
+  }
+
+  .actions {
+    button {
+      font-size: 16px;
+    }
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 64px;
+    box-sizing: border-box;
+    .help-overflow .title {
+      display: none;
+    }
+  }
+  .footer-logo {
+    width: 100%;
+    img {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
   }
 }

@@ -152,12 +152,16 @@ footer .help-overflow p {
   padding: 8px;
 }
 
+#accommodations {
+  margin-bottom: 72px;
+}
+
 .accommodation-landing {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   margin-bottom: 64px;
 }
 .accommodation-landing span {
@@ -165,7 +169,6 @@ footer .help-overflow p {
   color: #f5f5f5;
   font-size: 32px;
   font-weight: 600;
-  max-width: 550px;
   margin-bottom: 24px;
 }
 .accommodation-landing .filters {
@@ -180,22 +183,21 @@ footer .help-overflow p {
   width: 100%;
 }
 
-#accommodations {
-  padding: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .dwellings {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 64px;
 }
 
 .accommodation-card {
+  display: flex;
+  flex-direction: column;
   border: 3px solid #41913c;
   margin-top: 32px;
-  padding: 0 16px;
+  padding: 0 16px 32px;
+  position: relative;
 }
 .accommodation-card .photo-reel {
   display: grid;
@@ -244,6 +246,26 @@ footer .help-overflow p {
 .accommodation-card .photo-reel img.selected {
   opacity: 1;
 }
+.accommodation-card .accommodation-type {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  border-bottom: 3px solid #41913c;
+}
+.accommodation-card .accommodation-type span {
+  font-family: "Inter", sans-serif;
+  color: #f5f5f5;
+  font-size: 24px;
+  font-weight: 700;
+}
+.accommodation-card .accommodation-type .rating {
+  display: flex;
+  gap: 6px;
+}
+.accommodation-card .accommodation-type .star {
+  width: 1em;
+  height: 1em;
+}
 .accommodation-card p {
   font-family: "Inter", sans-serif;
   color: #f5f5f5;
@@ -254,7 +276,7 @@ footer .help-overflow p {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 .accommodation-card .info-title .name {
   display: flex;
@@ -275,6 +297,9 @@ footer .help-overflow p {
 .accommodation-card .info-title .per-night {
   font-size: 20px;
   font-weight: 700;
+}
+.accommodation-card .info-three-icons {
+  margin-top: 0 auto;
 }
 .accommodation-card .info-three-icons,
 .accommodation-card .amenity-icons {
@@ -300,6 +325,7 @@ footer .help-overflow p {
 }
 .accommodation-card .amenity-icons {
   font-size: 14px;
+  margin-top: auto;
 }
 .accommodation-card .amenity-icons .free-wifi,
 .accommodation-card .amenity-icons .family-room,
@@ -309,18 +335,235 @@ footer .help-overflow p {
 .accommodation-card .amenity-icons .hot-tub {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
+}
+.accommodation-card .food-modal .no-display {
+  display: none;
+}
+.accommodation-card .food-modal {
+  display: flex;
+  flex-direction: column;
+  background-color: #171717;
+  color: #f5f5f5;
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  box-shadow: 0 -3px 0 0 #41913c, 0 -38px 0 0 #171717;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+}
+.accommodation-card .food-modal button {
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 20px;
+  box-shadow: 0 0 0 3px #171717;
+  pointer-events: all;
+}
+.accommodation-card .food-modal ul {
+  font-size: 16px;
+  color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+.accommodation-card .food-modal span {
+  font-size: 20px;
+  color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+.accommodation-card .food-options {
+  padding: 16px;
+}
+.accommodation-card .kitchen {
+  position: relative;
+}
+.accommodation-card .kitchen img {
+  height: 100%;
+  width: 100%;
+}
+.accommodation-card .kitchen h2 {
+  background-color: rgba(85, 85, 85, 0.5);
+  font-size: 48px;
+  padding: 0px 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .accommodation-card .actions {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
   gap: 32px;
   margin: 0 auto;
-  margin-bottom: -1em;
-  margin-top: 16px;
   font-size: 24px;
 }
 .accommodation-card button {
   display: block;
   font-size: inherit;
-  padding: 6px 24px;
+  padding: 6px 20px;
+}
+
+@media (max-width: 1060px) {
+  #accommodations {
+    margin: 32px;
+  }
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    font-size: 14px;
+  }
+  .accommodation-card .photo-reel .carousel-toolbar button button {
+    padding: 4px 16px;
+  }
+  .dwellings {
+    width: 100%;
+  }
+  .dwellings .info-title h2 {
+    font-size: 34px;
+  }
+  .dwellings .info-title h3 {
+    font-size: 20px;
+  }
+  .dwellings .info-title .price {
+    font-size: 32px;
+  }
+  .dwellings .info-title .per-night {
+    font-size: 16px;
+  }
+  .dwellings .info-three-icons {
+    font-size: 14px;
+  }
+  .dwellings .amenity-icons span {
+    display: none;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 72px;
+  }
+}
+@media (max-width: 790px) {
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    font-size: 14px;
+  }
+  .accommodation-card .photo-reel .carousel-toolbar button button {
+    padding: 4px 16px;
+  }
+  .dwellings {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .dwellings .info-title h2 {
+    font-size: 48px;
+  }
+  .dwellings .info-title h3 {
+    font-size: 32px;
+  }
+  .dwellings .info-title .price {
+    font-size: 36px;
+  }
+  .dwellings .info-title .per-night {
+    font-size: 20px;
+  }
+  .dwellings .info-three-icons {
+    font-size: 18px;
+  }
+  .dwellings .amenity-icons span {
+    display: flex;
+  }
+  .dwellings .actions button {
+    font-size: 20px;
+  }
+  .dwellings footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dwellings .footer-logo {
+    width: 100%;
+  }
+  .dwellings .footer-logo img {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 525px) {
+  .accommodation-landing {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .accommodation-landing h1 {
+    font-size: 52px;
+  }
+  .accommodation-landing span {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .accommodation-landing * ~ section {
+    margin-top: 0;
+  }
+  .accommodation-landing .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .accommodation-landing .filters button {
+    grid-column: span 2;
+  }
+  .dwellings {
+    width: 100%;
+  }
+  .dwellings .info-title .name {
+    align-items: center;
+  }
+  .dwellings .info-title h2 {
+    font-size: 34px;
+  }
+  .dwellings .info-title h3 {
+    font-size: 20px;
+  }
+  .dwellings .info-title .price {
+    font-size: 28px;
+  }
+  .dwellings .info-title .per-night {
+    font-size: 14px;
+  }
+  .dwellings .info-three-icons {
+    font-size: 12px;
+  }
+  .dwellings .amenity-icons span {
+    display: none;
+  }
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    font-size: 14px;
+  }
+  .accommodation-card .photo-reel .carousel-toolbar button button {
+    padding: 4px 16px;
+  }
+  .actions button {
+    font-size: 16px;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 64px;
+    box-sizing: border-box;
+  }
+  footer .help-overflow .title {
+    display: none;
+  }
+  .footer-logo {
+    width: 100%;
+  }
+  .footer-logo img {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=accommodation.css.map */

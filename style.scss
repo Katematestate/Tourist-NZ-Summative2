@@ -36,7 +36,7 @@ section > .title {
   border: $border-size solid $cta-green;
   width: min(500px, 90vw);
   border-top: none;
-  background-color: $bkg-fade;
+  background-color: $bkg-fade-dark;
   position: absolute;
   padding-bottom: 16px;
   left: 50%;
@@ -71,7 +71,7 @@ section > .title {
     &:before {
       $pad: 24px;
       content: "";
-      background-color: $bkg-fade;
+      background-color: $bkg-fade-dark;
       display: block;
       position: absolute;
       left: -$pad;
@@ -311,6 +311,7 @@ section > .title {
 
   .three-img-grid {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
 
     :nth-child(1) {
       grid-column: span 2;
@@ -331,9 +332,8 @@ section > .title {
 
   footer {
     grid-template-columns: 1fr;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     box-sizing: border-box;
     .help-overflow .title {
       display: none;
@@ -342,7 +342,6 @@ section > .title {
 
   .footer-logo {
     width: 100%;
-    padding: 16px;
     img {
       display: block;
       width: 95%;

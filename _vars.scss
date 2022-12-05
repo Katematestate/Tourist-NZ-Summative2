@@ -3,6 +3,10 @@ $cta-green: #41913c;
 $bkg-black: #171717;
 $border-size: 3px;
 $bkg-fade: fade-out(
+  $color: #555,
+  $amount: 0.5,
+);
+$bkg-fade-dark: fade-out(
   $color: $bkg-black,
   $amount: 0.5,
 );
