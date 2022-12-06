@@ -15,15 +15,18 @@
 
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js" defer
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+      defer
     ></script>
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" defer
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+      defer
     ></script>
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" defer
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+      defer
     ></script>
     <link
       rel="stylesheet"
@@ -45,8 +48,15 @@
       <div class="dwellings-card">
         <h2>Dwellings <span>for</span> You</h2>
         <form action="/accommodation.html" class="filters">
-          <input name="guests" type="number" value="1" min="1" max="4" required/>
-          <input name="stay" id="dwellings-date-picker" type="text" required/>
+          <input
+            name="guests"
+            type="number"
+            value="1"
+            min="1"
+            max="4"
+            required
+          />
+          <input name="stay" id="dwellings-date-picker" type="text" required />
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -62,10 +72,10 @@
       </div>
 
       <div class="grid-column-two">
-        <div class="accommodation-card">
+        <a href="./accommodation.html?type=hostel" class="accommodation-card">
           <span class="card-img hostel"></span>
           <h2>Hostels</h2>
-        </div>
+        </a>
         <div class="accommodation-card">
           <span class="card-img hotel"></span>
           <h2>Hotels</h2>

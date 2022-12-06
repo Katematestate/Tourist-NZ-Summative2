@@ -186,9 +186,10 @@ const accommodation_database = [
 ];
 
 const query = new URLSearchParams(window.location.search);
-const guests = +query.get("guests") ?? 1;
-const stay = query.get("stay") ? query.get("stay").split(" - ") : ["", ""];
-const stay_days = getDays(new Date(stay[0]), new Date(stay[1]));
+const guests = +query.get("guests") ?? null;
+const stay = query.get("stay") ? query.get("stay").split(" - ") : null;
+const stay_days = stay ? getDays(new Date(stay[0]), new Date(stay[1])) : null;
+const show_all = query.get("show") === "all";
 //prefix $ shows that you can interact with jquery
 const $guests = $('input[name="guests"]');
 const $stay = $('input[name="stay"]');
@@ -227,17 +228,25 @@ function isInRange(value, lower, upper) {
 }
 
 const cards = accommodation_database.filter((dwelling) => {
-  let guestRange = [];
-  if (dwelling.guests[1]) {
-    guestRange = [dwelling.guests[0], dwelling.guests[1]];
-  } else {
-    guestRange = [dwelling.guests[0], dwelling.guests[0]];
+  if (show_all) {
+    return dwelling;
   }
 
-  if (
-    isInRange(guests, guestRange[0], guestRange[1]) &&
-    isInRange(stay_days, dwelling.nights[0], dwelling.nights[1])
-  ) {
+  if (guests && stay) {
+    let guestRange = [];
+    if (dwelling.guests[1]) {
+      guestRange = [dwelling.guests[0], dwelling.guests[1]];
+    } else {
+      guestRange = [dwelling.guests[0], dwelling.guests[0]];
+    }
+
+    if (
+      isInRange(guests, guestRange[0], guestRange[1]) &&
+      isInRange(stay_days, dwelling.nights[0], dwelling.nights[1])
+    ) {
+      return dwelling;
+    }
+  } else {
     return dwelling;
   }
 });
