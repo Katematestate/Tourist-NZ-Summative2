@@ -23,7 +23,7 @@
 
   .filters {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-columns: 5ch 1fr 100px;
     margin: 0 32px;
     gap: 16px;
     margin-top: -16px;
@@ -196,20 +196,11 @@
     font-size: 14px;
     margin-top: auto;
 
-    .free-wifi,
-    .family-room,
-    .no-smoking,
-    .fitness-centre,
-    .free-parking,
-    .hot-tub {
+    .amenity-icon {
       display: flex;
       flex-direction: column;
       margin-bottom: 8px;
     }
-  }
-
-  .food-modal .no-display {
-    display: none;
   }
 
   .food-modal {
@@ -248,7 +239,7 @@
       font-size: 20px;
       color: $off-white;
       font-family: "Inter", sans-serif;
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 
@@ -420,7 +411,7 @@
     }
 
     .filters {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 5ch 1fr;
 
       button {
         grid-column: span 2;

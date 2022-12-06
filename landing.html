@@ -12,6 +12,26 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Condiment&display=swap");
     </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js" defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" defer
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <script src="./script/landing.js" defer></script>
   </head>
   <body>
     <div class="nav-bar">
@@ -24,11 +44,11 @@
     <section id="landing-page">
       <div class="dwellings-card">
         <h2>Dwellings <span>for</span> You</h2>
-        <div class="filters">
-          <input type="number" min="1" max="4"/>
-          <input type="date" />
-          <button>Submit</button>
-        </div>
+        <form action="/accommodation.html" class="filters">
+          <input name="guests" type="number" value="1" min="1" max="4" required/>
+          <input name="stay" id="dwellings-date-picker" type="text" required/>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </section>
 
@@ -106,28 +126,27 @@
       </div>
     </section>
 
-    <footer >
-
+    <footer>
       <div class="footer-logo">
-        <img src="./resources/svgs/pure-nz-logo.svg" alt="">
+        <img src="./resources/svgs/pure-nz-logo.svg" alt="" />
       </div>
 
       <div class="find-us">
         <span class="title">Find Us On</span>
         <div class="social-media">
-          <img src="./resources/svgs/twitter-icon.svg" alt="twitter icon">
+          <img src="./resources/svgs/twitter-icon.svg" alt="twitter icon" />
           <p>Twitter</p>
         </div>
         <div class="social-media">
-          <img src="./resources/svgs/instagram-icon.svg" alt="instagram icon">
+          <img src="./resources/svgs/instagram-icon.svg" alt="instagram icon" />
           <p>Instagram</p>
         </div>
         <div class="social-media">
-          <img src="./resources/svgs/facebook-icon.svg" alt="facebook icon">
+          <img src="./resources/svgs/facebook-icon.svg" alt="facebook icon" />
           <p>Facebook</p>
         </div>
         <div class="social-media">
-          <img src="./resources/svgs/youtube-icon.svg" alt="youtube icon">
+          <img src="./resources/svgs/youtube-icon.svg" alt="youtube icon" />
           <p>Youtube</p>
         </div>
       </div>
@@ -155,7 +174,6 @@
         <p>Terms of use</p>
         <p>Privacy policy</p>
         <p>Cookies</p>
-    
       </div>
 
       <div class="help-overflow">
@@ -165,8 +183,6 @@
         <p>Adding your buisness and deals</p>
         <p>Linking to newzealand.com</p>
       </div>
-
     </footer>
-
   </body>
 </html>

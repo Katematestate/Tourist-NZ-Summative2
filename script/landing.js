@@ -1,0 +1,1 @@
+$('#dwellings-date-picker').daterangepicker({minDate: moment(), maxSpan: {days: 15}, autoApply: true});

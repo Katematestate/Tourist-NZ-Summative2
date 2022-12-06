@@ -90,7 +90,7 @@ section > .title {
 
   .filters {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-columns: 5ch 1fr 100px;
     margin: 0 32px;
     gap: 16px;
     margin-top: -16px;
@@ -266,7 +266,7 @@ section > .title {
     }
 
     .filters {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 5ch 1fr;
 
       button {
         grid-column: span 2;

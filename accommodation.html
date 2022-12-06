@@ -12,6 +12,28 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Condiment&display=swap");
     </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <script src="./script/accommodation.js" defer></script>
   </head>
   <body>
     <div class="nav-bar">
@@ -25,420 +47,52 @@
     <section id="accommodations">
       <div class="accommodation-landing">
         <h1>Accommodation</h1>
-        <span>Find accommodation to suit every level of comfort and budget</span>
-        <div class="filters">
-          <input type="number" min="1" max="4" />
-          <input type="date" />
-          <button>Submit</button>
-        </div>
+        <span
+          >Find accommodation to suit every level of comfort and budget</span
+        >
+        <form class="filters" action="/accommodation.html">
+          <input
+            name="guests"
+            type="number"
+            value="1"
+            min="1"
+            max="4"
+            required
+          />
+          <input
+            name="stay"
+            id="accommodation-date-picker"
+            type="text"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
       </div>
 
-      <div class="dwellings">
-        <div class="accommodation-card hostel">
-          <div class="photo-reel" data-current-image="0">
-            
-            <img
-            class="selected"
-            src="./resources/images/the-dwellington/the-dwellington-front.jpg"
-            alt=""
-            />
-            <img src="./resources/images/the-dwellington/the-dwellington-dining-room.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-cinema.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-kitchen.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-laundry.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-lounge.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-outside.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-porch.jpg" alt="">
-            <img src="./resources/images/the-dwellington/the-dwellington-room.jpg" alt="">
-            <div class="carousel-toolbar">
-              <button class="left">&lt;</button>
-              <div class="carousel-chips"></div>
-              <button class="right">&gt;</button>
-            </div>
-          </div>
-          <div class="accommodation-type">
-            <span>Hostel</span>
-            <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">9.1</span>
-          </div>
-          <div class="info-title">
-            <h2>The Dwellington</h2>
-            <p class="per-night"><span class="price">$30</span>/ night</p>
-          </div>
-          <div class="info-three-icons">
-            <div class="location">
-              <img src="./resources/svgs/location-icon.svg" alt="" />
-              <span>Wellington, NZ</span>
-            </div>
-            <div class="guests">
-              <img src="./resources/svgs/people-icon.svg" alt="" />
-              <span>1 Adult</span>
-            </div>
-            <div class="nights">
-              <img src="./resources/svgs/night-icon.svg" alt="" />
-              <span>1-10 nights</span>
-            </div>
-          </div>
-          <p>
-            Offering a tennis court, The Dwellington is less than 5 minutes’
-            drive from the Bluebridge Ferry Terminal and 10 minutes’ drive from
-            the Interislander Ferry Terminal. Guests can enjoy free ferry drop
-            offs in the morning and free WiFi in public areas. 
-          </p>
-          <p>
-            The Dwellington
-            is a 10 minute walk from Wellington Train and Bus Station and a
-            variety of restaurants, cafes and shops. It’s a 15 minute walk from
-            the Westpac Stadium and Lambton Quay. There is access to a shared
-            kitchen and a dining area. The bathroom facilities are shared and
-            include a shower and a toilet. There is also a mini-cinema with a 4K
-            projector.
-          </p>
-          <div class="amenity-icons">
-            <div class="free-wifi">
-              <img src="./resources/svgs/wifi-icon.svg" alt="" />
-              <span>Free Wifi</span>
-            </div>
-            <div class="family-room">
-              <img src="./resources/svgs/family-icon.svg" alt="" />
-              <span>Family Rooms</span>
-            </div>
-            <div class="no-smoking">
-              <img src="./resources/svgs/no-smoking-icon.svg" alt="" />
-              <span>Non-smoking Rooms</span>
-            </div>
-          </div>
-          <div class="food-modal no-display" id="dwellington-food-options" style="opacity: 0;">
-            <div class="kitchen">
-              <h2>Food Options</h2>
-              <img src="./resources/images/the-dwellington/the-dwellington-kitchen.jpg" alt="">
-            </div>
-            <button class="exit" data-toggles="dwellington-food-options">X</button>
-            <div class="food-options">
-              <span>Drink Options: (Free & All Day)</span>
-              <ul>
-                <li>Coffee (variety of milks)</li>
-                <li>Tea</li>
-                <li>Hot Chocolate</li>
-              </ul>
-              <span>Breakfast Choices: (Free)</span>
-              <ul>
-                <li>Continental</li>
-                <li>Cereal (3 choices)</li>
-                <li>Bread (peanut butter and jam)</li>
-                <li>Eggs (myriad of herbs, spices and oils)</li>
-                <li>Fruit (banana, kiwi and oranges)</li>
-              </ul>
-              <span>Open kitchen for cooking your own food.</span>
-            </div>
-          </div>
-          <div class="actions">
-            <button class="secondary" data-toggles="dwellington-food-options">Food Options</button>
-            <button>Book</button>
-          </div>
-          </div>
-        <div class="accommodation-card hotel">
-          <div class="photo-reel" data-current-image="0">
-            <img
-            class="selected"
-            src="./resources/images/novotel-queenstown-lakeside/novotel-front.jpg"
-            alt=""
-            />
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-balcony.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-buffet.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-eatery.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-entrance-view.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-gym.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-room.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-restaurant.jpg" alt="">
-            <img src="./resources/images/novotel-queenstown-lakeside/novotel-view.jpg" alt="">
-            <div class="carousel-toolbar">
-              <button class="left">&lt;</button>
-              <div class="carousel-chips"></div>
-              <button class="right">&gt;</button>
-            </div>
-          </div>
-          <div class="accommodation-type">
-            <span>Hotel</span>
-            <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">8.1</span>
-          </div>
-          <div class="info-title">
-            <div class="name">
-              <h2>Novotel</h2>
-              <h3>Queenstown Lakeside</h3>
-            </div>
-            <p class="per-night"><span class="price">$157</span>/ night</p>
-          </div>
-          <div class="info-three-icons">
-            <div class="location">
-              <img src="./resources/svgs/location-icon.svg" alt="" />
-              <span>Queenstown, NZ</span>
-            </div>
-            <div class="guests">
-              <img src="./resources/svgs/people-icon.svg" alt="" />
-              <span>1-2 Adults</span>
-            </div>
-            <div class="nights">
-              <img src="./resources/svgs/night-icon.svg" alt="" />
-              <span>1-5 nights</span>
-            </div>
-          </div>
-          <p>
-            Nestled on the shores of Lake Wakatipu, Novotel Queenstown Lakeside is just a 1-minute walk from many shops, restaurants, nightlife and activities. Novotel Queenstowns’ contemporary rooms offer a selection of spectacular alpine, garden and lake views. Each air-conditioned room features a private balcony and a flat-screen TV. Novotel offers ski storage facilities, a spa pool, guest laundry and valet car parking. Guests can enjoy 30-minutes free WiFi in the lobby. In-room WiFi is available at an additional charge. 
-          </p>
-          <p>
-            24-hour room service is available. There is a concierge service which can organize transfers to the local ski fields, including Coronet Peak, The Remarkables and Cardrona.
-          </p>
-          <div class="amenity-icons">
-            <div class="free-wifi">
-              <img src="./resources/svgs/wifi-icon.svg" alt="" />
-              <span>Free Wifi</span>
-            </div>
-            <div class="family-room">
-              <img src="./resources/svgs/family-icon.svg" alt="" />
-              <span>Family Rooms</span>
-            </div>
-            <div class="no-smoking">
-              <img src="./resources/svgs/no-smoking-icon.svg" alt="" />
-              <span>Non-smoking Rooms</span>
-            </div>
-            <div class="fitness-centre">
-              <img src="./resources/svgs/fitness-icon.svg" alt="" />
-              <span>Fitness Centre</span>
-            </div>
-          </div>
-          <div class="food-modal no-display" id="novotel-food-options" style="opacity: 0;">
-            <div class="kitchen">
-              <h2>Food Options</h2>
-              <img src="./resources/images/novotel-queenstown-lakeside/novotel-buffet.jpg" alt="">
-            </div>
-            <button class="exit" data-toggles="novotel-food-options">X</button>
-            <div class="food-options">
-              <span>Drink Options: (Available in all rooms)</span>
-              <ul>
-                <li>Coffee</li>
-                <li>Tea</li>
-              </ul>
-              <span>Breakfast Choices: (Restaurant & Bar in hotel)</span>
-              <ul>
-                <li>Buffet</li>
-              </ul>
-              <span>Novotel's In-House Restaurant</span><p>Elements Restaurant boasts local cuisine and ingredients, including the hotel’s very own rooftop honey. It also serves daily buffet breakfast with hot and continental options. Enjoy tapas and beverages in front of the fireplace at Elements Cafe & Bar.</p>
-            </div>
-          </div>
-          <div class="actions">
-            <button class="secondary" data-toggles="novotel-food-options">Food Options</button>
-            <button>Book</button>
-          </div>
-          </div>
-          <div class="accommodation-card motel">
-            <div class="photo-reel" data-current-image="0">
-              <img
-              class="selected"
-              src="./resources/images/futuna-rocks-motel/futuna-rocks-front.jpg"
-              alt=""
-              />
-              <img src="./resources/images/futuna-rocks-motel/futuna-rocks-bathroom.jpg" alt="">
-              <img src="./resources/images/futuna-rocks-motel/futuna-rocks-kitchen.jpg" alt="">
-              <img src="./resources/images/futuna-rocks-motel/futuna-rocks-outside.jpg" alt="">
-              <img src="./resources/images/futuna-rocks-motel/futuna-rocks-room.jpg" alt="">
-              <img src="./resources/images/futuna-rocks-motel/futuna-rocks-room2.jpg" alt="">
-              <img src="./resources/images/futuna-rocks-motel/futuna-rocks-view.jpg" alt="">
-              <div class="carousel-toolbar">
-                <button class="left">&lt;</button>
-                <div class="carousel-chips"></div>
-                <button class="right">&gt;</button>
-              </div>
-            </div>
-            <div class="accommodation-type">
-              <span>Motel</span>
-              <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">9.1</span>
-            </div>
-            <div class="info-title">
-              <div class="name">
-                <h2 class="size-fix">Futuna Rocks</h2>
-                <h3>Motel</h3>
-              </div>
-              <p class="per-night"><span class="price">$90</span>/ night</p>
-            </div>
-            <div class="info-three-icons">
-              <div class="location">
-                <img src="./resources/svgs/location-icon.svg" alt="" />
-                <span>Kaikoura, NZ</span>
-              </div>
-              <div class="guests">
-                <img src="./resources/svgs/people-icon.svg" alt="" />
-                <span>2-4 Adults</span>
-              </div>
-              <div class="nights">
-                <img src="./resources/svgs/night-icon.svg" alt="" />
-                <span>3-10 nights</span>
-              </div>
-            </div>
-            <p>
-              Situated in Kaikoura, within a few steps of Kaikoura Beach and 1.7 km of Waioruarangi, Futuna Rocks Motel features accommodation with a garden and free WiFi throughout the property as well as free private parking for guests who drive. The property offers garden views and a barbecue. 
-            </p>
-            <p>
-              All rooms at the motel are fitted with a seating area and a flat-screen TV. The rooms are fitted with a kettle and a private bathroom with a shower and free toiletries, while some rooms also boast a kitchenette fitted with a stovetop. At Futuna Rocks Motel each room is fitted with bed linen and towels.
-            </p>
-            <p>
-              Goose Bay is 18 km from the accommodation, while Oaro is 23 km from the property. The nearest airport is Kaikoura Airport, 8 km from the Futuna Rocks Motel.
-            </p>
-            <div class="amenity-icons">
-              <div class="free-wifi">
-                <img src="./resources/svgs/wifi-icon.svg" alt="" />
-                <span>Free Wifi</span>
-              </div>
-              <div class="free-parking">
-                <img src="./resources/svgs/parking-icon.svg" alt="" />
-                <span>Free Parking</span>
-              </div>
-              <div class="no-smoking">
-                <img src="./resources/svgs/no-smoking-icon.svg" alt="" />
-                <span>Non-smoking Rooms</span>
-              </div>
-            </div>
-            <div class="food-modal no-display" id="futuna-food-options" style="opacity: 0;">
-              <div class="kitchen">
-                <h2>Food Options</h2>
-                <img src="./resources/images/futuna-rocks-motel/futuna-rocks-kitchen.jpg" alt="">
-              </div>
-              <button class="exit" data-toggles="futuna-food-options">X</button>
-              <div class="food-options">
-                <span>Drink Options:</span>
-                <ul>
-                  <li>Kettle provided (bring your own drinks)</li>
-                </ul>
-                <span>Breakfast Choices:</span>
-                <ul>
-                  <li>Fridge provided (bring food)</li>
-                  <li>Stovetop (cooking your own food)</li>
-                </ul>
-                <span>There are restaurants and cafes nearby.</span>
-              </div>
-            </div>
-            <div class="actions">
-              <button class="secondary" data-toggles="futuna-food-options">Food Options</button>
-              <button>Book</button>
-            </div>
-            </div>
-            <div class="accommodation-card house">
-              <div class="photo-reel" data-current-image="0">
-                <img
-                class="selected"
-                src="./resources/images/dream-inn/dream-inn-front.jpg"
-                alt=""
-                />
-                <img src="./resources/images/dream-inn/dream-inn-bathroom.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-bedroom.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-hot-tub.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-kitchen.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-laundry.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-lounge.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-room2.jpg" alt="">
-                <img src="./resources/images/dream-inn/dream-inn-view.jpg" alt="">
-                <div class="carousel-toolbar">
-                  <button class="left">&lt;</button>
-                  <div class="carousel-chips"></div>
-                  <button class="right">&gt;</button>
-                </div>
-              </div>
-              <div class="accommodation-type">
-                <span>House</span>
-                
-                <span class="rating"><img class="star" src="./resources/svgs/star-icon.svg" alt="">9.4</span>
-              </div>
-              <div class="info-title">
-                  <h2>Dream Inn</h2>
-                <p class="per-night"><span class="price">$240</span>/ night</p>
-              </div>
-              <div class="info-three-icons">
-                <div class="location">
-                  <img src="./resources/svgs/location-icon.svg" alt="" />
-                  <span>Auckland, NZ</span>
-                </div>
-                <div class="guests">
-                  <img src="./resources/svgs/people-icon.svg" alt="" />
-                  <span>1-4 Adults</span>
-                </div>
-                <div class="nights">
-                  <img src="./resources/svgs/night-icon.svg" alt="" />
-                  <span>2-15 nights</span>
-                </div>
-              </div>
-              <p>
-                Dream Inn, a property with a garden and a terrace, is situated in Auckland, 16 km from Auckland Harbour Bridge, 19 km from North Head Historic Reserve, as well as 19 km from Sky Tower. The air-conditioned accommodation is 700 m from Browns Bay Beach, and guests benefit from private parking available on site and free WiFi.
-              </p>
-              <p>
-                The villa features 3 bedrooms, 2 bathrooms, bed linen, towels, a flat-screen TV, a dining area, a fully equipped kitchen and a patio with garden views.
-              </p>
-              <p>
-                At the villa guests are welcome to take advantage of a hot tub. Viaduct Harbour is 19 km from Dream Inn, while Aotea Centre is 19 km from the property. The nearest airport is Auckland Airport, 39 km from the accommodation.
-              </p>
-              <div class="amenity-icons">
-                <div class="free-wifi">
-                  <img src="./resources/svgs/wifi-icon.svg" alt="" />
-                  <span>Free Wifi</span>
-                </div>
-                <div class="free-parking">
-                  <img src="./resources/svgs/parking-icon.svg" alt="" />
-                  <span>Free Parking</span>
-                </div>
-                <div class="no-smoking">
-                  <img src="./resources/svgs/no-smoking-icon.svg" alt="" />
-                  <span>Non-smoking Rooms</span>
-                </div>
-                <div class="hot-tub">
-                  <img src="./resources/svgs/hot-tub-icon.svg" alt="" />
-                  <span>Hot Tub/Jacuzzi</span>
-                </div>
-              </div>
-              <div class="food-modal no-display" id="dream-food-options" style="opacity: 0;">
-                <div class="kitchen">
-                  <h2>Food Options</h2>
-                  <img src="./resources/images/dream-inn/dream-inn-kitchen.jpg" alt="">
-                </div>
-                <button class="exit" data-toggles="dream-food-options">X</button>
-                <div class="food-options">
-                  <span>Drink Options:</span>
-                  <ul>
-                    <li>Kettle provided (bring your own drinks)</li>
-                  </ul>
-                  <span>Breakfast Choices:</span>
-                  <ul>
-                    <li>Fully equipped kitchen (bring food to cook)</li>
-                  </ul>
-                  <span>There are restaurants and cafes nearby.</span>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="secondary" data-toggles="dream-food-options">Food Options</button>
-                <button>Book</button>
-              </div>
-              </div>
-        </div>
-    </section>
-    <footer >
+      <div id="dwellings-container" class="dwellings"></div>
 
+    </section>
+    <footer>
       <div class="footer-logo">
-        <img src="./resources/svgs/pure-nz-logo.svg" alt="">
+        <img src="./resources/svgs/pure-nz-logo.svg" alt="" />
       </div>
 
       <div class="find-us">
         <span class="title">Find Us On</span>
         <div class="social-media">
-          <img src="./resources/svgs/twitter-icon.svg" alt="twitter icon">
+          <img src="./resources/svgs/twitter-icon.svg" alt="twitter icon" />
           <p>Twitter</p>
         </div>
         <div class="social-media">
-          <img src="./resources/svgs/instagram-icon.svg" alt="instagram icon">
+          <img src="./resources/svgs/instagram-icon.svg" alt="instagram icon" />
           <p>Instagram</p>
         </div>
         <div class="social-media">
-          <img src="./resources/svgs/facebook-icon.svg" alt="facebook icon">
+          <img src="./resources/svgs/facebook-icon.svg" alt="facebook icon" />
           <p>Facebook</p>
         </div>
         <div class="social-media">
-          <img src="./resources/svgs/youtube-icon.svg" alt="youtube icon">
+          <img src="./resources/svgs/youtube-icon.svg" alt="youtube icon" />
           <p>Youtube</p>
         </div>
       </div>
@@ -466,7 +120,6 @@
         <p>Terms of use</p>
         <p>Privacy policy</p>
         <p>Cookies</p>
-    
       </div>
 
       <div class="help-overflow">
@@ -476,8 +129,6 @@
         <p>Adding your buisness and deals</p>
         <p>Linking to newzealand.com</p>
       </div>
-
     </footer>
-    <script src="./script/accommodation.js"></script>
   </body>
 </html>
