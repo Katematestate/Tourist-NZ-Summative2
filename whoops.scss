@@ -1,0 +1,70 @@
+@import "vars.scss";
+@import "common.scss";
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px;
+
+  h1 {
+    margin-bottom: 24px;
+  }
+  
+  span{
+    font-size: 24px;
+      color: $off-white;
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      margin-bottom: 32px;
+  }
+
+  button{
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 1060px){
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 790px){
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-logo {
+    width: 100%;
+    img {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 525px){
+  footer {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 64px;
+    box-sizing: border-box;
+    .help-overflow .title {
+      display: none;
+    }
+  }
+  .footer-logo {
+    width: 100%;
+    img {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+}
+
