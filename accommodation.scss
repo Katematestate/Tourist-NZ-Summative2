@@ -70,7 +70,7 @@
 
       button {
         font-size: 20px;
-        box-shadow: 0 0 0 3px $bkg-black;
+        box-shadow: 0 0 0 2px $bkg-black;
       }
 
       .carousel-chips {
@@ -82,7 +82,7 @@
           width: 10px;
           background-color: #fff;
           border-radius: 100%;
-          border: 3px solid $bkg-black;
+          border: 1px solid $bkg-black;
 
           &.selected {
             background-color: $cta-green;

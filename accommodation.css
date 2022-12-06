@@ -218,7 +218,7 @@ footer .help-overflow p {
 }
 .accommodation-card .photo-reel .carousel-toolbar button {
   font-size: 20px;
-  box-shadow: 0 0 0 3px #171717;
+  box-shadow: 0 0 0 2px #171717;
 }
 .accommodation-card .photo-reel .carousel-toolbar .carousel-chips {
   display: flex;
@@ -229,7 +229,7 @@ footer .help-overflow p {
   width: 10px;
   background-color: #fff;
   border-radius: 100%;
-  border: 3px solid #171717;
+  border: 1px solid #171717;
 }
 .accommodation-card .photo-reel .carousel-toolbar .carousel-chips .carousel-chip.selected {
   background-color: #41913c;
