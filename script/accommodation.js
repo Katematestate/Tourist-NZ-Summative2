@@ -242,12 +242,19 @@ const cards = accommodation_database.filter((dwelling) => {
 
     if (
       isInRange(guests, guestRange[0], guestRange[1]) &&
-      isInRange(stay_days, dwelling.nights[0], dwelling.nights[1])
+      isInRange(stay_days, dwelling.nights[0], dwelling.nights[1]) &&
+      dwelling.type.toLowerCase() === query.get("type")
     ) {
       return dwelling;
     }
   } else {
-    return dwelling;
+    if (query.get("type")) {
+      if (dwelling.type.toLowerCase() === query.get("type")) {
+        return dwelling;
+      }
+    } else {
+      return dwelling;
+    }
   }
 });
 
@@ -389,7 +396,7 @@ for (const dwelling of cards) {
         <button class="secondary" data-toggles="${food_options_id}">
           Food Options
         </button>
-        <button>Book</button>
+        <button data-toggles="pay-me-message">Book</button>
       </div>
     `)
   );

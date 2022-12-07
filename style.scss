@@ -2,7 +2,7 @@
 @import "common.scss";
 
 * ~ section {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 section > .title {
@@ -16,13 +16,11 @@ section > .title {
   }
 }
 
-
-
 #landing-page {
   display: flex;
   flex-direction: column;
   background-image: url(./resources/images/landing-image-tub.jpg);
-  height: 80vh;
+  height: 75vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
