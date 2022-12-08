@@ -242,8 +242,7 @@ const cards = accommodation_database.filter((dwelling) => {
 
     if (
       isInRange(guests, guestRange[0], guestRange[1]) &&
-      isInRange(stay_days, dwelling.nights[0], dwelling.nights[1]) &&
-      dwelling.type.toLowerCase() === query.get("type")
+      isInRange(stay_days, dwelling.nights[0], dwelling.nights[1])
     ) {
       return dwelling;
     }
