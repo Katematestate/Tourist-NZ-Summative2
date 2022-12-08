@@ -214,7 +214,6 @@ footer .help-overflow p {
   top: 90%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .accommodation-card .photo-reel .carousel-toolbar button {
   font-size: 20px;
@@ -553,7 +552,12 @@ footer .help-overflow p {
     margin: 0 auto;
   }
 }
-@media (max-width: 525px) {
+@media (max-width: 510px) {
+  #pay-me-message .payment-methods {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 425px) {
   .accommodation-landing {
     gap: 16px;
     margin-bottom: 32px;
@@ -607,6 +611,9 @@ footer .help-overflow p {
   .actions button {
     font-size: 16px;
   }
+  #pay-me-message .payment-methods {
+    grid-template-columns: 1fr;
+  }
   footer {
     grid-template-columns: 1fr;
     width: 80%;
@@ -624,5 +631,26 @@ footer .help-overflow p {
     display: block;
     width: 95%;
     margin: 0 auto;
+  }
+}
+@media (max-width: 320px) {
+  .accommodation-card .photo-reel .carousel-toolbar {
+    top: 85%;
+  }
+  .accommodation-card .photo-reel .carousel-toolbar button {
+    padding: 4px 12px;
+  }
+  .carousel-chip {
+    display: none;
+  }
+  .accommodation-card .info-title {
+    flex-direction: column;
+    align-items: center;
+  }
+  .accommodation-card .accommodation-type span {
+    font-size: 18px;
+  }
+  .dwellings .actions button {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=accommodation.css.map */
